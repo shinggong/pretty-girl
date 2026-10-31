@@ -913,7 +913,7 @@ bootEl.addEventListener('pointerdown',e=>{e.preventDefault();closeBoot()});
 abtn.addEventListener('pointerdown',e=>{e.preventDefault();if(!bootEl.hidden){closeBoot();return}if(!selEl.hidden){$('selStart').click();return}act()});
 abtn.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();act()}});
 /* sticker set, placed like the mock-up (left/top/width in % of the console) */
-$('stickers').innerHTML=[['pretty',3.9,5.5,37,-8],['heartkey',3.9,67.2,12.4,-15],['rescene',38.5,72.1,31.8,0,6],['bstar',81,69.3,8.5,-10],['bunny',83,67.2,16.3,8],['pstar',41,87.2,16.6,-10],['phone',53.5,85.1,18.9,0]]
+$('stickers').innerHTML=[['pretty',3.9,5.5,37,-8],['heartkey',3.9,67.2,12.4,-15],['rescene',38.5,72.1,31.8,0,16],['bstar',81,69.3,8.5,-10],['bunny',83,67.2,16.3,8],['pstar',41,87.2,16.6,-10],['phone',53.5,85.1,18.9,0]]
   .map(([k,l,t,w,r,dy=0])=>`<img class="sticker" alt="" src="${ART['stk2_'+k]}" style="left:${l}%;top:calc(${t}% + ${dy}px);width:${w}%;transform:rotate(${r}deg)">`).join('');
 /* iOS: holding a button must not bring up the magnifier, callout or double-tap zoom */
 ['touchstart','touchend'].forEach(t=>$('controls').addEventListener(t,e=>e.preventDefault(),{passive:false}));
